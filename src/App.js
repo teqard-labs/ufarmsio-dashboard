@@ -13,7 +13,7 @@ function App() {
         <Route exact path="/:name/" element={<Install />} />
         <Route path="/ex" element={<Card/>}/>
         <Route path="/dashboard" element={<DashBoard/>}/>
-        <Route path="/dashboard/login" element={<Login/>}/>
+        <Route path="/login" element={<Login/>}/>
         <Route path="/requests" element={<Requests/>}/>
       </Routes>
     </BrowserRouter>
