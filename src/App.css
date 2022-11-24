@@ -113,3 +113,15 @@
 .tfcolor{
   color:#4f4d4d;
 }
+
+.circle {
+  display: flex;
+  width: 25vh;
+  height: 25vh;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.text {
+  margin: auto;
+}

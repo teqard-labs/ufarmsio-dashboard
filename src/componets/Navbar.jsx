@@ -28,22 +28,22 @@ export default class Navbar extends Component {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a className=" hover:bg-lime-500" href="/ufarmsio-dashboard/myfarms">My Farms</a>
+                <a>My Farms</a>
               </li>
               <li>
-                <a className=" hover:bg-lime-500" href="/ufarmsio-dashboard/dashboard">DashBoard</a>
+                <a>Dashboard</a>
               </li>
               <li>
-                <a className=" hover:bg-lime-500" href="/ufarmsio-dashboard/report">Report</a>
+                <a>Report</a>
               </li>
               <li>
-                <a className=" hover:bg-lime-500" href="/ufarmsio-dashboard/settings">Settings</a>
+                <a>Settings</a>
               </li>
             </ul>
           </div>
         </div>
         <div className="navbar-center">
-          <a className="btn btn-ghost normal-case text-xl pb-5" href="#"><img src={logo} alt="logo" height="56" width="100"/></a>
+          <a className="btn btn-ghost normal-case text-xl">Ufarms.io</a>
         </div>
         <div className="navbar-end">
           <button className="btn btn-ghost btn-circle"
