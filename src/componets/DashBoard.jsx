@@ -67,7 +67,7 @@ export default class DashBoard extends Component {
           labels,
           datasets: [
             {
-              label: "Dataset 1",
+              label: "Yield",
               data: devices[user].sensor_data.yield,
               borderColor: "rgb(255, 99, 132)",
               backgroundColor: "rgba(255, 99, 132, 0.5)",
