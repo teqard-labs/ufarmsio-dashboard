@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-
+import Logo from './media/logo.png';
 
 class Login extends React.Component{
   render(){
