@@ -26,6 +26,7 @@ ChartJS.register(
 );
 
 export const options = {
+  responsive: true,
   plugins: {
     legend: {
       position: "top",
@@ -37,9 +38,15 @@ export const options = {
   },
 };
 
-const labels = ["May", "June", "July","August","September","October","November"];
-
-
+const labels = [
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+];
 
 export default class DashBoard extends Component {
   constructor(props) {
@@ -57,26 +64,26 @@ export default class DashBoard extends Component {
       let device_elements = [];
       for (let user in devices) {
         const data = {
-            labels,
-            datasets: [
-              {
-                label: "Dataset 1",
-                data: devices[user].sensor_data.yield,
-                borderColor: "rgb(255, 99, 132)",
-                backgroundColor: "rgba(255, 99, 132, 0.5)",
-              }
-            ],
-          };
-        options.plugins.title.text = devices[user].user_name;        
+          labels,
+          datasets: [
+            {
+              label: "Dataset 1",
+              data: devices[user].sensor_data.yield,
+              borderColor: "rgb(255, 99, 132)",
+              backgroundColor: "rgba(255, 99, 132, 0.5)",
+            },
+          ],
+        };
+        options.plugins.title.text = devices[user].user_name;
         device_elements.push(
-          <div key={user}>
-            <div className="card lg:card-side bg-base-100 shadow-xl">
-              <Line options={options} data={data} />
+          <div key={user} className="p-5">
+            <div className="card lg:card-side bg-base-100 w-[40vw] shadow-xl">
+              <Line options={options} data={data} height="250" />
               <div className="card-body">
                 <h2 className="card-title">{devices[user].location}</h2>
                 <p>{devices[user].sensor_data.ph}</p>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-primary">View User</button>
+                  <button className="btn btn-primary">Request Config</button>
                 </div>
               </div>
             </div>
