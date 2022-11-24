@@ -14,6 +14,7 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
+import Navbar from "./Navbar";
 
 ChartJS.register(
   CategoryScale,
@@ -29,7 +30,7 @@ export const options = {
   responsive: true,
   plugins: {
     legend: {
-      position: "top",
+      display: false,
     },
     title: {
       display: true,
@@ -74,15 +75,16 @@ export default class DashBoard extends Component {
             },
           ],
         };
-        options.plugins.title.text = devices[user].user_name;
         device_elements.push(
           <div
             key={user}
-            className="card m-5 p-5 lg:card-side bg-base-100 w-[40vw] shadow-xl"
+            className="card m-5 p-5 lg:card-side bg-base-100 lg:w-[40vw] shadow-xl"
           >
             <Line options={options} data={data} height="250" />
             <div className="card-body">
-              <h2 className="card-title">{devices[user].location}</h2>
+              <h2 className="card-title">
+                {devices[user].user_name} @ {devices[user].location}
+              </h2>
               <p>{devices[user].sensor_data.ph}</p>
               <div className="card-actions justify-end">
                 <button className="btn btn-primary">Request Config</button>
@@ -99,8 +101,11 @@ export default class DashBoard extends Component {
   render() {
     return (
       <div>
-        DashBoard
-        <div className="flex flex-row flex-wrap"> {this.state.device_elements}</div>
+        <Navbar />
+        <div className="flex flex-row flex-wrap justify-center">
+          {" "}
+          {this.state.device_elements}
+        </div>
       </div>
     );
   }
