@@ -1,18 +1,18 @@
 import React from 'react';
 import '../App.css';
-import Logo from './media/logo.png';
+
 
 class Login extends React.Component{
   render(){
     return(
       <div id="loginform">
-        <img src={Logo}
+        {/* <img src={Logo}
             alt="Logo"
             height="84"
             width="150"
             className='imgp'
             
-        />
+        /> */}
 
         <FormHeader title="Login" />
         <Form />
