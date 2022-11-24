@@ -76,15 +76,16 @@ export default class DashBoard extends Component {
         };
         options.plugins.title.text = devices[user].user_name;
         device_elements.push(
-          <div key={user} className="p-5">
-            <div className="card lg:card-side bg-base-100 w-[40vw] shadow-xl">
-              <Line options={options} data={data} height="250" />
-              <div className="card-body">
-                <h2 className="card-title">{devices[user].location}</h2>
-                <p>{devices[user].sensor_data.ph}</p>
-                <div className="card-actions justify-end">
-                  <button className="btn btn-primary">Request Config</button>
-                </div>
+          <div
+            key={user}
+            className="card m-5 p-5 lg:card-side bg-base-100 w-[40vw] shadow-xl"
+          >
+            <Line options={options} data={data} height="250" />
+            <div className="card-body">
+              <h2 className="card-title">{devices[user].location}</h2>
+              <p>{devices[user].sensor_data.ph}</p>
+              <div className="card-actions justify-end">
+                <button className="btn btn-primary">Request Config</button>
               </div>
             </div>
           </div>
@@ -99,7 +100,7 @@ export default class DashBoard extends Component {
     return (
       <div>
         DashBoard
-        <div> {this.state.device_elements}</div>
+        <div className="flex flex-row flex-wrap"> {this.state.device_elements}</div>
       </div>
     );
   }
