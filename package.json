@@ -1,8 +1,8 @@
 {
-  "name": "react-template",
+  "name": "ufarmsio-dashboard",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://r0king.github.io/react-template/",
+  "homepage": "https://teqard-labs.github.io/ufarmsio-dashboard/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
