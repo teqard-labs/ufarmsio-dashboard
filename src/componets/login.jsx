@@ -5,7 +5,7 @@ import Logo from './media/logo.png';
 class Login extends React.Component{
   render(){
     return(
-      <div id="loginform">
+      <div id="loginform" >
         {/* <img src={Logo}
             alt="Logo"
             height="84"
