@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import logo from "./media/logo.png";
 
 export default class Navbar extends Component {
   render() {
     return (
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 bg-lime-300">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -27,19 +28,22 @@ export default class Navbar extends Component {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>Homepage</a>
+                <a className=" hover:bg-lime-500" href="/ufarmsio-dashboard/myfarms">My Farms</a>
               </li>
               <li>
-                <a>Portfolio</a>
+                <a className=" hover:bg-lime-500" href="/ufarmsio-dashboard/dashboard">DashBoard</a>
               </li>
               <li>
-                <a>About</a>
+                <a className=" hover:bg-lime-500" href="/ufarmsio-dashboard/report">Report</a>
+              </li>
+              <li>
+                <a className=" hover:bg-lime-500" href="/ufarmsio-dashboard/settings">Settings</a>
               </li>
             </ul>
           </div>
         </div>
         <div className="navbar-center">
-          <a className="btn btn-ghost normal-case text-xl">UfarmIO</a>
+          <a className="btn btn-ghost normal-case text-xl pb-5" href="#"><img src={logo} alt="logo" height="56" width="100"/></a>
         </div>
         <div className="navbar-end">
           <button className="btn btn-ghost btn-circle"

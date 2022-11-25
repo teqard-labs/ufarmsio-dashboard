@@ -3,6 +3,7 @@ import "animate.css/animate.min.css";
 import Card from "./componets/Card";
 import Install from "./componets/Install";
 import Login from "./componets/Login";
+import Myfarms from "./componets/farms";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DashBoard from "./componets/DashBoard";
 import Requests from "./componets/Requests";
@@ -14,6 +15,7 @@ function App() {
         <Route path="/ex" element={<Card/>}/>
         <Route path="/dashboard" element={<DashBoard/>}/>
         <Route path="/login" element={<Login/>}/>
+        <Route path="/myfarms" element={<Myfarms/>}/>
         <Route path="/requests" element={<Requests/>}/>
       </Routes>
     </BrowserRouter>

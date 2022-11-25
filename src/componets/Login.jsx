@@ -6,7 +6,7 @@ class Login extends React.Component {
   render() {
     return (
       <div className="flex justify-center h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-        <div id="loginform" className="w-[60vw]">
+        <div id="loginform" className="w-[25vw]">
           {/* <img src={Logo}
             alt="Logo"
             height="84"
@@ -58,7 +58,7 @@ const FormInput = (props) => (
 const OtherMethods = (props) => (
   <div id="alternativeLogin" className="flex flex-wrap px-3">
     <p>
-      Cannot log in? <a href="#">Click Here</a> to contact our customer support
+      Cannot log in? <a href="#" className="text-violet-700">Click Here</a> to contact our customer support
       to help you!
     </p>
   </div>
