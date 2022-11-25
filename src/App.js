@@ -6,6 +6,7 @@ import Login from "./componets/login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DashBoard from "./componets/DashBoard";
 import Requests from "./componets/Requests";
+import PlantData from "./componets/Plant_data";
 function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -15,6 +16,7 @@ function App() {
         <Route path="/dashboard" element={<DashBoard/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/requests" element={<Requests/>}/>
+        <Route path="/data" element={<PlantData/>}/>
       </Routes>
     </BrowserRouter>
   );
