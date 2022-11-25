@@ -6,6 +6,7 @@ import Login from "./componets/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DashBoard from "./componets/DashBoard";
 import Requests from "./componets/Requests";
+import PlantData from "./componets/Plant_data";
 import React from "react";
 
 function App() {
@@ -13,10 +14,11 @@ function App() {
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route exact path="/:name/" element={<Install />} />
-        <Route path="/ex" element={<Card />} />
-        <Route path="/dashboard" element={<DashBoard />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/requests" element={<Requests />} />
+        <Route path="/ex" element={<Card/>}/>
+        <Route path="/dashboard" element={<DashBoard/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/requests" element={<Requests/>}/>
+        <Route path="/data" element={<PlantData/>}/>
       </Routes>
     </BrowserRouter>
   );
