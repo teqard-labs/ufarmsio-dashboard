@@ -14,6 +14,7 @@ function App() {
         <Route exact path="/:name/" element={<Install />} />
         <Route path="/ex" element={<Card/>}/>
         <Route path="/dashboard" element={<DashBoard/>}/>
+        <Route path="/requests" element={<Requests/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/myfarms" element={<Myfarms/>}/>
         <Route path="/requests" element={<Requests/>}/>
