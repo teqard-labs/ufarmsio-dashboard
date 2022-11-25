@@ -57,6 +57,7 @@ export default class Requests extends Component {
     });
   };
   componentDidMount() {
+    
     this.unsub = onSnapshot(doc(db, "devices", "iot"), async (doc) => {
       const source = doc.metadata.hasPendingWrites ? "Local" : "Server";
       this.devices = await doc.data();

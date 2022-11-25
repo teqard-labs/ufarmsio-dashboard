@@ -15,7 +15,6 @@ class Login extends React.Component {
     onAuthStateChanged(this.auth, (user) => {
       if (user) {
         const uid = user.uid;
-
         window.location.pathname = process.env.PUBLIC_URL + "/dashboard";
       } else {
       }
@@ -39,14 +38,6 @@ class Login extends React.Component {
     return (
       <div className="flex justify-center h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
         <div id="loginform" className="w-[60vw]">
-          {/* <img src={Logo}
-            alt="Logo"
-            height="84"
-            width="150"
-            className='imgp'
-            
-          /> */}
-
           <FormHeader title="Login" />
           <Form login={this.login} />
           <OtherMethods />

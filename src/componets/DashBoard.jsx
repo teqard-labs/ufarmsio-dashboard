@@ -15,6 +15,7 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import Navbar from "./Navbar";
+import { getAuth } from "firebase/auth";
 
 ChartJS.register(
   CategoryScale,
@@ -73,6 +74,7 @@ export default class DashBoard extends Component {
     alert("Requested Config");
   };
   componentDidMount() {
+
     this.unsub = onSnapshot(doc(db, "devices", "iot"), async (doc) => {
       const source = doc.metadata.hasPendingWrites ? "Local" : "Server";
       const devices = await doc.data();
