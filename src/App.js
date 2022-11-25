@@ -2,7 +2,7 @@ import "./App.css";
 import "animate.css/animate.min.css";
 import Card from "./componets/Card";
 import Install from "./componets/Install";
-import Login from "./componets/login";
+import Login from "./componets/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DashBoard from "./componets/DashBoard";
 import Requests from "./componets/Requests";
