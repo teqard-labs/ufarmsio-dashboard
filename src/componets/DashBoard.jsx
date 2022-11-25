@@ -70,41 +70,8 @@ export default class DashBoard extends Component {
     this.unsub = onSnapshot(doc(db, "devices", "iot"), async (doc) => {
       const source = doc.metadata.hasPendingWrites ? "Local" : "Server";
       const devices = await doc.data();
-      let device_elements = [];
-      for (let user in devices) {
-        const data = {
-          labels,
-          datasets: [
-            {
-              label: "Yield",
-              data: devices[user].sensor_data.yield,
-              borderColor: "rgb(255, 99, 132)",
-              backgroundColor: "rgba(255, 99, 132, 0.5)",
-            },
-          ],
-        };
-        options.plugins.title.text = devices[user].user_name;
-        device_elements.push(
-          <div
-            key={user}
-            className="card m-5 p-5 lg:card-side bg-base-100 w-[40vw] shadow-xl"
-          >
-            <Line options={options} data={data} height="250" />
-            <div className="card-body">
-              <h2 className="card-title">{devices[user].location}</h2>
-              <p>{devices[user].sensor_data.ph}</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Request Config</button>
-              </div>
-            </div>
-          </div>
-        );
-      }
-      this.setState({
-        device_elements: device_elements,
-      });
-    });
-  }
+     
+  }}
   render() {
     return (
       <div className="bg-slate-200 h-screen">
