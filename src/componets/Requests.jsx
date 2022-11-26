@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import { db } from "../firebase";
 import { doc, onSnapshot, updateDoc } from "firebase/firestore";
+import Navbar from './Navbar';
 
 export default class Requests extends Component {
   constructor(props) {
@@ -132,7 +133,7 @@ export default class Requests extends Component {
   render() {
     return (
       <div data-theme="emerald" className="min-h-screen">
-        Requests
+        <Navbar />
         <div className=" flex justify-center mt-10">
           <div className="stack">{this.state.request_elements}</div>
         </div>
