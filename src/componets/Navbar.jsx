@@ -43,7 +43,10 @@ export default class Navbar extends Component {
                 <a>Homepage</a>
               </li>
               <li>
-                <a href="/ufarmsio-dashboard/dashboard">DashBoard</a>
+                <a href="/ufarmsio-dashboard/dashboard">My Farms</a>
+              </li>
+              <li>
+                <a href="/ufarmsio-dashboard/data">DashBoard</a>
               </li>
               <li>
                 <span

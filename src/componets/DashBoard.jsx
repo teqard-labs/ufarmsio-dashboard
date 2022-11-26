@@ -86,99 +86,132 @@ export default class DashBoard extends Component {
 
   render() {
     return (
-      <div className="bg-slate-200 h-screen">
+      <div className=" h-screen bg-slate-700">
         <Navbar />
-        <div className=" flex flex-shrink justify-center">
+        <div className=" flex flex-shrink justify-center" >
           {" "}
           {this.state.device_elements}
      
-    <div className="flex gap-x-24 gap-y-8 grid sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 grid-row-none justify-center">
+    <div className="flex gap-x-24 gap-y-8 grid sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 grid-row-none justify-center mt-10">
 
-    <div className="circle justify-center border-lime-500 border-4 border-solid mt-10">
+    
+
+      <div class="flex justify-center ">
+  <div class="block p-6 rounded-lg shadow-lg bg-gradient-to-r from-green-500 to-yellow-400">
+    <div className="circle justify-center border-lime-500 border-4 border-solid mt-5 mb-5 ">
+        <div className="indicator ">
+          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh] "><p className="text-black text-center text-xs">120 Kg/Month</p></span>
+          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh]  "><p className="text-white text-center text-xs">0.2Kg CO2</p></span>
+          <button>
+          <a href="/ufarmsio-dashboard/data">
+            <img className="w-[13vh] h-[13vh] justify-center mt-2 ml-1.5" src={Barn} alt="barn" /></a>
+            <div className="justify-center mb-4">
+            <p className="text-xs text-black">Farm 1</p>
+            <p className="text-xs text-black">Farm ID: UUID12345</p>
+            </div>
+          </button>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+<div class="flex justify-center">
+  <div class="block p-6 rounded-lg shadow-lg bg-gradient-to-r from-green-500 to-yellow-400">
+    <div className="circle justify-center border-lime-500 border-4 border-solid mt-5 mb-5">
         <div className="indicator">
           <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh] "><p className="text-black text-center text-xs">120 Kg/Month</p></span>
           <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh]  "><p className="text-white text-center text-xs">0.2Kg CO2</p></span>
           <button>
           <a href="/ufarmsio-dashboard/data">
-            <img className="w-[13vh] h-[13vh] justify-center ml-3" src={Barn} alt="barn" /></a>
+            <img className="w-[13vh] h-[13vh] justify-center mt-2 ml-1.5" src={Barn} alt="barn" /></a>
             <div className="justify-center mb-4">
-            <p className="text-xs">Farm 1</p>
-            <p className="text-xs">Farm ID: UUID12345</p>
+            <p className="text-xs text-black">Farm 1</p>
+            <p className="text-xs text-black">Farm ID: UUID12345</p>
             </div>
           </button>
         </div>
       </div>
+  </div>
+</div>
 
-      <div className="circle justify-center flex flex-wrap border-lime-500 border-4 border-solid mt-10">
+<div class="flex justify-center">
+  <div class="block p-6 rounded-lg shadow-lg bg-gradient-to-r from-green-500 to-yellow-400">
+    <div className="circle justify-center border-lime-500 border-4 border-solid mt-5 mb-5">
         <div className="indicator">
-          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh]  "><p className="text-black text-center text-xs">300 Kg/Month</p></span>
-          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh]  "><p className="text-white text-center text-xs">1.2Kg CO2</p></span>
-          <button>
-          <a href="/ufarmsio-dashboard/data">
-            <img className="w-[13vh] h-[13vh] justify-center ml-3" src={Barn} alt="barn" /></a>
-            <div className="justify-center mb-4">
-            <p className="text-xs">Farm 2</p>
-            <p className="text-xs">Farm ID: UUID14286</p>
-            </div>
-          </button>
-        </div>
-      </div>
-
-      <div className="circle justify-center flex flex-wrap border-lime-500 border-4 border-solid mt-10">
-        <div className="indicator">
-          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh]  "><p className="text-black text-center text-xs">700 Kg/Month</p></span>
+          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh] "><p className="text-black text-center text-xs">120 Kg/Month</p></span>
           <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh]  "><p className="text-white text-center text-xs">0.2Kg CO2</p></span>
           <button>
-            <img className="w-[13vh] h-[13vh] justify-center ml-3" src={Barn} alt="barn" />
+          <a href="/ufarmsio-dashboard/data">
+            <img className="w-[13vh] h-[13vh] justify-center mt-2 ml-1.5" src={Barn} alt="barn" /></a>
             <div className="justify-center mb-4">
-            <p className="text-xs">Farm 3</p>
-            <p className="text-xs">Farm ID: UUID18445</p>
+            <p className="text-xs text-black">Farm 1</p>
+            <p className="text-xs text-black">Farm ID: UUID12345</p>
             </div>
           </button>
         </div>
       </div>
-      
-      <div className="circle justify-center flex flex-wrap border-lime-500 border-4 border-solid mt-10">
-        <div className="indicator">
-          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh]  "><p className="text-black text-center text-xs">240 Kg/Month</p></span>
-          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh]  "><p className="text-white text-center text-xs">0.6Kg CO2</p></span>
-          <button>
-            <img className="w-[13vh] h-[13vh] justify-center ml-3" src={Barn} alt="barn" />
-            <div className="justify-center mb-4">
-            <p className="text-xs">Farm 4</p>
-            <p className="text-xs">Farm ID: UUID12455</p>
-            </div>
-          </button>
-        </div>
-      </div>
+  </div>
+</div>
 
-      <div className="circle justify-center flex flex-wrap border-lime-500 border-4 border-solid mt-10">
+<div class="flex justify-center">
+  <div class="block p-6 rounded-lg shadow-lg bg-gradient-to-r from-green-500 to-yellow-400">
+    <div className="circle justify-center border-lime-500 border-4 border-solid mt-5 mb-5">
         <div className="indicator">
-          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh]  "><p className="text-black text-center text-xs">400 Kg/Month</p></span>
-          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh]  "><p className="text-white text-center text-xs">1Kg CO2</p></span>
+          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh] "><p className="text-black text-center text-xs">120 Kg/Month</p></span>
+          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh]  "><p className="text-white text-center text-xs">0.2Kg CO2</p></span>
           <button>
-            <img className="w-[13vh] h-[13vh] justify-center ml-3" src={Barn} alt="barn" />
+          <a href="/ufarmsio-dashboard/data">
+            <img className="w-[13vh] h-[13vh] justify-center mt-2 ml-1.5" src={Barn} alt="barn" /></a>
             <div className="justify-center mb-4">
-            <p className="text-xs">Farm 5</p>
-            <p className="text-xs">Farm ID: UUID12867</p>
+            <p className="text-xs text-black">Farm 1</p>
+            <p className="text-xs text-black">Farm ID: UUID12345</p>
             </div>
           </button>
         </div>
       </div>
+  </div>
+</div>
 
-      <div className="circle justify-center flex flex-wrap border-lime-500 border-4 border-solid mt-10">
+<div class="flex justify-center">
+  <div class="block p-6 rounded-lg shadow-lg bg-gradient-to-r from-green-500 to-yellow-400">
+    <div className="circle justify-center border-lime-500 border-4 border-solid mt-5 mb-5">
         <div className="indicator">
-          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh]  "><p className="text-black text-center text-xs">250 Kg/Month</p></span>
-          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh]  "><p className="text-white text-center text-xs">0.5Kg CO2</p></span>
+          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh] "><p className="text-black text-center text-xs">120 Kg/Month</p></span>
+          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh]  "><p className="text-white text-center text-xs">0.2Kg CO2</p></span>
           <button>
-            <img className="w-[13vh] h-[13vh] justify-center ml-3" src={Barn} alt="barn" />
+          <a href="/ufarmsio-dashboard/data">
+            <img className="w-[13vh] h-[13vh] justify-center mt-2 ml-1.5" src={Barn} alt="barn" /></a>
             <div className="justify-center mb-4">
-            <p className="text-xs">Farm 6</p>
-            <p className="text-xs">Farm ID: UUID12874</p>
+            <p className="text-xs text-black">Farm 1</p>
+            <p className="text-xs text-black">Farm ID: UUID12345</p>
             </div>
           </button>
         </div>
       </div>
+  </div>
+</div>
+
+<div class="flex justify-center">
+  <div class="block p-6 rounded-lg shadow-lg bg-gradient-to-r from-green-500 to-yellow-400">
+    <div className="circle justify-center border-lime-500 border-4 border-solid mt-5 mb-5">
+        <div className="indicator">
+          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh] "><p className="text-black text-center text-xs">120 Kg/Month</p></span>
+          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh]  "><p className="text-white text-center text-xs">0.2Kg CO2</p></span>
+          <button>
+          <a href="/ufarmsio-dashboard/data">
+            <img className="w-[13vh] h-[13vh] justify-center mt-2 ml-1.5" src={Barn} alt="barn" /></a>
+            <div className="justify-center mb-4">
+            <p className="text-xs text-black">Farm 1</p>
+            <p className="text-xs text-black">Farm ID: UUID12345</p>
+            </div>
+          </button>
+        </div>
+      </div>
+  </div>
+</div>
       
 
      
