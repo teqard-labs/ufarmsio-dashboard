@@ -94,7 +94,7 @@ export default class Data extends Component {
         device_elements.push(
             <div>
             <div class="flex flex-col">
-  <h2 class="mb-4 ml-4 text-2xl font-bold">Sensor Data</h2>
+  <h2 class="mb-4 ml-4 mt-4 text-2xl font-bold text-black">Sensor Data</h2>
 
   <div class="mt-4 ml-4 mr-4 grid grid-cols-6 grid-rows-none gap-4 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4">
     <div class="flex w-48 items-start rounded-xl bg-white p-4 shadow-lg">
@@ -204,9 +204,9 @@ export default class Data extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="h-full bg-gradient-to-r from-green-400 to-yellow-400">
         <Navbar />
-        <div className="flex flex-row flex-wrap justify-center">
+        <div className="flex flex-row flex-wrap justify-center  ">
           {" "}
           {this.state.device_elements}
         </div>
