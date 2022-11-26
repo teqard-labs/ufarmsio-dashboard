@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Logo from "./media/logo.png";
 import Navbar from "./Navbar";
+import Bgraph from "./Farmdata"
 class Fdashboard extends Component {
     constructor(props) {
         super(props);
@@ -11,80 +11,14 @@ class Fdashboard extends Component {
             
            <div>
             <Navbar></Navbar>
-<aside class="ml-[-100%] fixed z-10 top-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-green transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
-    <div>
-      
+            
 
-        <div class="mt-8 text-center">
-            <img src="https://tailus.io/sources/blocks/stats-cards/preview/images/second_user.webp" alt="" class="w-10 h-10 m-auto rounded-full object-cover lg:w-28 lg:h-28"></img>
-            <h5 class="hidden mt-4 text-xl font-semibold text-gray-600 lg:block">Cynthia J. Watts</h5>
-            <span class="hidden text-gray-400 lg:block">Farmer</span>
-        </div>
 
-        <ul class="space-y-2 tracking-wide mt-8">
-            <li>
-                <a href="#" aria-label="dashboard" class="relative px-4 py-3 flex items-center space-x-4 rounded-xl text-white bg-gradient-to-r from-sky-600 to-cyan-400">
-                    <svg class="-ml-1 h-6 w-6" viewBox="0 0 24 24" fill="none">
-                        <path d="M6 8a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V8ZM6 15a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-1Z" class="fill-current text-cyan-400 dark:fill-slate-600"></path>
-                        <path d="M13 8a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2V8Z" class="fill-current text-cyan-200 group-hover:text-cyan-300"></path>
-                        <path d="M13 15a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-1Z" class="fill-current group-hover:text-sky-300"></path>
-                    </svg>
-                    <span class="-mr-1 font-medium">Dashboard</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path class="fill-current text-gray-300 group-hover:text-cyan-300" fill-rule="evenodd" d="M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z" clip-rule="evenodd" />
-                        <path class="fill-current text-gray-600 group-hover:text-cyan-600" d="M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z" />
-                    </svg>
-                    <span class="group-hover:text-gray-700">Categories</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path class="fill-current text-gray-600 group-hover:text-cyan-600" fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clip-rule="evenodd" />
-                        <path class="fill-current text-gray-300 group-hover:text-cyan-300" d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z" />
-                    </svg>
-                    <span class="group-hover:text-gray-700">Reports</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path class="fill-current text-gray-600 group-hover:text-cyan-600" d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" />
-                        <path class="fill-current text-gray-300 group-hover:text-cyan-300" d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
-                    </svg>
-                    <span class="group-hover:text-gray-700">Other data</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path class="fill-current text-gray-300 group-hover:text-cyan-300" d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
-                        <path class="fill-current text-gray-600 group-hover:text-cyan-600" fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd" />
-                    </svg>
-                    <span class="group-hover:text-gray-700">Finance</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <div class="px-6 -mx-6 pt-4 flex justify-between items-center border-t">
-        <button class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-            </svg>
-            <span class="group-hover:text-gray-700">Logout</span>
-        </button>
-    </div>
-</aside>
-<div class="ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%]">
+<div class="ml-24 mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%]">
     
 
     <div class="px-6 pt-6 2xl:container">
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div class="grid gap-24 md:grid-cols-2 lg:grid-cols-3">
             <div class="md:col-span-2 lg:col-span-1" >
                 <div class="h-full py-8 px-6 space-y-6 rounded-xl border border-gray-200 bg-white">
                     <svg class="w-40 m-auto opacity-75" viewBox="0 0 146 146" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -116,23 +50,18 @@ class Fdashboard extends Component {
                         </defs>
                     </svg>
                     <div>
-                        <h5 class="text-xl text-gray-600 text-center">Global Activities</h5>
+                        
                         <div class="mt-2 flex justify-center gap-4">
-                            <h3 class="text-3xl font-bold text-gray-700">$23,988</h3>
-                            <div class="flex items-end gap-1 text-green-500">
-                                <svg class="w-3" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.00001 0L12 8H-3.05176e-05L6.00001 0Z" fill="currentColor"/>
-                                </svg>
-                                <span>2%</span>
-                            </div>
+                            <h3 class="text-3xl font-bold text-gray-700">Sensor Data</h3>
+                            
                         </div>
-                        <span class="block text-center text-gray-500">Compared to last week $13,988</span>
+                        
                     </div>
                     <table class="w-full text-gray-600">
                         <tbody>
                             <tr>
-                                <td class="py-2">Tailored ui</td>
-                                <td class="text-gray-500">896</td>
+                                <td class="py-2">Temperature</td>
+                                <td class="text-gray-500">28°C</td>
                                 <td>
                                     <svg class="w-16 ml-auto" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect opacity="0.4" width="17" height="21" rx="1" fill="#e4e4f2"/>
@@ -150,8 +79,8 @@ class Fdashboard extends Component {
                                 </td>   
                             </tr>
                             <tr>
-                                <td class="py-2">Customize</td>
-                                <td class="text-gray-500">1200</td>
+                                <td class="py-2">Humidity</td>
+                                <td class="text-gray-500">67%</td>
                                 <td>
                                     <svg class="w-16 ml-auto" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect opacity="0.4" width="17" height="21" rx="1" fill="#e4e4f2"/>
@@ -169,8 +98,8 @@ class Fdashboard extends Component {
                                 </td>   
                             </tr>
                             <tr>
-                                <td class="py-2">Other</td>
-                                <td class="text-gray-500">12</td>
+                                <td class="py-2">Water Level</td>
+                                <td class="text-gray-500">120 L</td>
                                 <td>
                                     <svg class="w-16 ml-auto" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect opacity="0.4" width="17" height="21" rx="1" fill="#e4e4f2"/>
@@ -187,36 +116,28 @@ class Fdashboard extends Component {
                                     </svg>
                                 </td>   
                             </tr>
-                        </tbody>
-                    </table> 
-                </div>
-            </div>
-            <div>
-                <div class="h-full py-6 px-6 rounded-xl border border-gray-200 bg-white">
-                    <h5 class="text-xl text-gray-700">Downloads</h5>
-                    <div class="my-8">
-                        <h1 class="text-5xl font-bold text-gray-800">64,5%</h1>
-                        <span class="text-gray-500">Compared to last week $13,988</span>
-                    </div>
-                    <svg class="w-full" viewBox="0 0 218 69" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 67.5C27.8998 67.5 24.6002 15 52.5 15C80.3998 15 77.1002 29 105 29C132.9 29 128.6 52 156.5 52C184.4 52 189.127 63.8158 217.027 63.8158" stroke="url(#paint0_linear_622:13664)" stroke-width="3" stroke-linecap="round"/>
-                        <path d="M0 67.5C27.2601 67.5 30.7399 31 58 31C85.2601 31 80.7399 2 108 2C135.26 2 134.74 43 162 43C189.26 43 190.74 63.665 218 63.665" stroke="url(#paint1_linear_622:13664)" stroke-width="3" stroke-linecap="round"/>
-                        <defs>
-                        <linearGradient id="paint0_linear_622:13664" x1="217.027" y1="15" x2="7.91244" y2="15" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#4DFFDF"/>
-                        <stop offset="1" stop-color="#4DA1FF"/>
-                        </linearGradient>
-                        <linearGradient id="paint1_linear_622:13664" x1="218" y1="18.3748" x2="5.4362" y2="18.9795" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#E323FF"/>
-                        <stop offset="1" stop-color="#7517F8"/>
-                        </linearGradient>
-                        </defs>
-                    </svg>
-                    <table class="mt-6 -mb-2 w-full text-gray-600">
-                        <tbody>
                             <tr>
-                                <td class="py-2">From new users</td>
-                                <td class="text-gray-500">896</td>
+                                <td class="py-2">Water Temperature</td>
+                                <td class="text-gray-500">24°C</td>
+                                <td>
+                                    <svg class="w-16 ml-auto" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect opacity="0.4" width="17" height="21" rx="1" fill="#e4e4f2"/>
+                                        <rect opacity="0.4" x="19" width="14" height="21" rx="1" fill="#e4e4f2"/>
+                                        <rect opacity="0.4" x="35" width="14" height="21" rx="1" fill="#e4e4f2"/>
+                                        <rect opacity="0.4" x="51" width="17" height="21" rx="1" fill="#e4e4f2"/>
+                                        <path d="M0 6C8.62687 6 6.85075 12.75 17 12.75C27.1493 12.75 25.3731 9 34 9C42.6269 9 42.262 13.875 49 13.875C55.5398 13.875 58.3731 6 67 6" stroke="url(#paint0_linear_622:13649)" stroke-width="2" stroke-linejoin="round"/>
+                                        <defs>
+                                        <linearGradient id="paint0_linear_622:13649" x1="57" y1="7.96873" x2="3.67368" y2="6.44377" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#03fc67"/>
+                                        <stop offset="1" stop-color="#FC4E03"/>
+                                        </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </td>   
+                            </tr>
+                            <tr>
+                                <td class="py-2">pH</td>
+                                <td class="text-gray-500">6.2</td>
                                 <td>
                                     <svg class="w-16 ml-auto" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect opacity="0.4" width="17" height="21" rx="1" fill="#e4e4f2"/>
@@ -233,25 +154,48 @@ class Fdashboard extends Component {
                                     </svg>
                                 </td>   
                             </tr>
+                        </tbody>
+                    </table> 
+                </div>
+            </div>
+            <div>
+                <div class="h-full py-6 px-6 rounded-xl border border-gray-200 bg-white">
+                    <h5 class="text-xl text-gray-700">Details</h5>
+                    
+        
+                    <table class="mt-6 -mb-2 w-full text-gray-600">
+                        <tbody>
                             <tr>
-                                <td class="py-2">From old users</td>
-                                <td class="text-gray-500">1200</td>
-                                <td>
-                                    <svg class="w-16 ml-auto" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect opacity="0.4" width="17" height="21" rx="1" fill="#e4e4f2"/>
-                                        <rect opacity="0.4" x="19" width="14" height="21" rx="1" fill="#e4e4f2"/>
-                                        <rect opacity="0.4" x="35" width="14" height="21" rx="1" fill="#e4e4f2"/>
-                                        <rect opacity="0.4" x="51" width="17" height="21" rx="1" fill="#e4e4f2"/>
-                                        <path d="M0 12.929C8.69077 12.929 7.66833 9.47584 17.8928 9.47584C28.1172 9.47584 25.5611 15.9524 34.2519 15.9524C42.9426 15.9524 44.8455 10.929 51.6334 10.929C58.2217 10.929 59.3092 5 68 5" stroke="url(#paint0_linear_622:13640)" stroke-width="2" stroke-linejoin="round"/>
-                                        <defs>
-                                        <linearGradient id="paint0_linear_622:13640" x1="34" y1="5" x2="34" y2="15.9524" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#8AFF6C"/>
-                                        <stop offset="1" stop-color="#02C751"/>
-                                        </linearGradient>
-                                        </defs>
-                                    </svg>
-                                </td>   
+                                <td class="py-2">Crop Name</td>
+                                <td class="text-gray-500">Lettuce</td>
+                                  
                             </tr>
+                            <tr>
+                                <td class="py-2">Day Planted </td>
+                                <td class="text-gray-500">22-02-2022</td>
+                                 
+                            </tr>
+                            <tr>
+                                <td class="py-2">Days to Harvest</td>
+                                <td class="text-gray-500">25</td>
+                                  
+                            </tr>
+                            <tr>
+                                <td class="py-2">Device ID</td>
+                                <td class="text-gray-500">1200</td>
+                                 
+                            </tr>
+                            <tr>
+                                <td class="py-2">Sensors installed</td>
+                                <td class="text-gray-500">5</td>
+                                  
+                            </tr>
+                            <tr>
+                                <td class="py-2">Device Active time</td>
+                                <td class="text-gray-500">5 hrs</td>
+                                 
+                            </tr>
+                         
                         </tbody>
                     </table>   
                 </div>
@@ -272,23 +216,18 @@ class Fdashboard extends Component {
                         </defs>
                     </svg>
                     <div class="mt-6">
-                        <h5 class="text-xl text-gray-700 text-center">Ask to customize</h5>
+                        
                         <div class="mt-2 flex justify-center gap-4">
-                            <h3 class="text-3xl font-bold text-gray-700">28</h3>
-                            <div class="flex items-end gap-1 text-green-500">
-                                <svg class="w-3" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6.00001 0L12 8H-3.05176e-05L6.00001 0Z" fill="currentColor"/>
-                                </svg>
-                                <span>2%</span>
-                            </div>
+                            <h3 class="text-3xl font-bold text-gray-700">Yield Data</h3>
+                            
                         </div>
-                        <span class="block text-center text-gray-500">Compared to last week 13</span>
+                    
                     </div>
                     <table class="mt-6 -mb-2 w-full text-gray-600">
                         <tbody>
                             <tr>
-                                <td class="py-2">Tailored ui</td>
-                                <td class="text-gray-500">896</td>
+                                <td class="py-2">January</td>
+                                <td class="text-gray-500">400 kg</td>
                                 <td>
                                     <svg class="w-16 ml-auto" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect opacity="0.4" width="17" height="21" rx="1" fill="#e4e4f2"/>
@@ -306,8 +245,8 @@ class Fdashboard extends Component {
                                 </td>   
                             </tr>
                             <tr>
-                                <td class="py-2">Customize</td>
-                                <td class="text-gray-500">1200</td>
+                                <td class="py-2">February</td>
+                                <td class="text-gray-500">450 kg</td>
                                 <td>
                                     <svg class="w-16 ml-auto" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect opacity="0.4" width="17" height="21" rx="1" fill="#e4e4f2"/>
@@ -325,8 +264,8 @@ class Fdashboard extends Component {
                                 </td>   
                             </tr>
                             <tr>
-                                <td class="py-2">Other</td>
-                                <td class="text-gray-500">12</td>
+                                <td class="py-2">March</td>
+                                <td class="text-gray-500">500 kg</td>
                                 <td>
                                     <svg class="w-16 ml-auto" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect opacity="0.4" width="17" height="21" rx="1" fill="#e4e4f2"/>
@@ -343,6 +282,44 @@ class Fdashboard extends Component {
                                     </svg>
                                 </td>   
                             </tr>
+                            <tr>
+                                <td class="py-2">April</td>
+                                <td class="text-gray-500">530 kg</td>
+                                <td>
+                                    <svg class="w-16 ml-auto" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect opacity="0.4" width="17" height="21" rx="1" fill="#e4e4f2"/>
+                                        <rect opacity="0.4" x="19" width="14" height="21" rx="1" fill="#e4e4f2"/>
+                                        <rect opacity="0.4" x="35" width="14" height="21" rx="1" fill="#e4e4f2"/>
+                                        <rect opacity="0.4" x="51" width="17" height="21" rx="1" fill="#e4e4f2"/>
+                                        <path d="M0 7C8.62687 7 7.61194 16 17.7612 16C27.9104 16 25.3731 9 34 9C42.6269 9 44.5157 5 51.2537 5C57.7936 5 59.3731 14.5 68 14.5" stroke="url(#paint0_linear_622:13631)" stroke-width="2" stroke-linejoin="round"/>
+                                        <defs>
+                                        <linearGradient id="paint0_linear_622:13631" x1="68" y1="7.74997" x2="1.69701" y2="8.10029" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#E323FF"/>
+                                        <stop offset="1" stop-color="#7517F8"/>
+                                        </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </td>   
+                            </tr>
+                            <tr>
+                                <td class="py-2">May</td>
+                                <td class="text-gray-500">700 kg</td>
+                                <td>
+                                    <svg class="w-16 ml-auto" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect opacity="0.4" width="17" height="21" rx="1" fill="#e4e4f2"/>
+                                        <rect opacity="0.4" x="19" width="14" height="21" rx="1" fill="#e4e4f2"/>
+                                        <rect opacity="0.4" x="35" width="14" height="21" rx="1" fill="#e4e4f2"/>
+                                        <rect opacity="0.4" x="51" width="17" height="21" rx="1" fill="#e4e4f2"/>
+                                        <path d="M0 12.929C8.69077 12.929 7.66833 9.47584 17.8928 9.47584C28.1172 9.47584 25.5611 15.9524 34.2519 15.9524C42.9426 15.9524 44.8455 10.929 51.6334 10.929C58.2217 10.929 59.3092 5 68 5" stroke="url(#paint0_linear_622:13640)" stroke-width="2" stroke-linejoin="round"/>
+                                        <defs>
+                                        <linearGradient id="paint0_linear_622:13640" x1="34" y1="5" x2="34" y2="15.9524" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#8AFF6C"/>
+                                        <stop offset="1" stop-color="#02C751"/>
+                                        </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </td>   
+                            </tr>
                         </tbody>
                     </table>   
                 </div>
@@ -350,6 +327,7 @@ class Fdashboard extends Component {
         </div>
     </div>
 </div>
+<Bgraph></Bgraph>
            </div>
             
             

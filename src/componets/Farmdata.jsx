@@ -1,34 +1,134 @@
-import {db} from '../firebase';
-import React,{useState,useEffect} from 'react';
-export default function Farm  ()  {
-   
-const [farms,setFarms]=useState([])
-  const fetchFarms=async()=>{
-    const response=db.collection('Farms1');
-    const data=await response.get();
-    data.docs.forEach(item=>{
-     setFarms([...farms,item.data()])
-    })
+import React, { Component } from "react";
+import { db } from "../firebase";
+import { doc, onSnapshot, updateDoc } from "firebase/firestore";
+
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import { Line } from "react-chartjs-2";
+
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+export const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      display: false,
+    },
+    title: {
+      display: true,
+      text: "",
+    },
+  },
+};
+
+const labels = [
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+];
+
+
+export default class Data extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      device_elements: [],
+    };
+    this.uid = "user1";
+    this.unsub = null;
+    this.devices = {};
   }
-  useEffect(() => {
-    fetchFarms();
-  }, [])
-  return (
-    <div className="App">
-      {
-        farms && farms.map(farm=>{
-          return(
-            <div className="blog-container">
-              <h4>{farm.Temperature}</h4>
-              <h4>{farm.Humidity}</h4>
-              <h4>{farm.Water_level}</h4>
-              <h4>{farm.Water_temp}</h4>
-              <h4>{farm.pH}</h4>
-              <h4>{farm.EC}</h4>
+  requestConfig = async (uid) => {
+    console.log(uid);
+    const rpath = `${this.uid}.requests`;
+
+    if (this.devices[this.uid].requests.indexOf(uid) === -1) {
+      this.devices[this.uid].requests.push(uid);
+    }
+    const updatedRequests = this.devices[this.uid].requests;
+    await updateDoc(doc(db, "devices", "iot"), {
+      [rpath]: updatedRequests,
+    });
+    alert("Requested Config");
+  };
+  componentDidMount() {
+    this.unsub = onSnapshot(doc(db, "devices", "iot"), async (doc) => {
+      const source = doc.metadata.hasPendingWrites ? "Local" : "Server";
+      const devices = await doc.data();
+      this.devices = devices;
+      let device_elements = [];
+      for (let user in devices) {
+        const data = {
+          labels,
+          datasets: [
+            {
+              label: "Yield",
+              data: devices[user].sensor_data.yield,
+              borderColor: "rgb(255, 99, 132)",
+              backgroundColor: "rgba(255, 99, 132, 0.5)",
+            },
+          ],
+        };
+        device_elements.push(
+          <div
+            key={user}
+            className="card m-5 p-5  bg-base-100 lg:w-[40vw] max-w-[450px] shadow-xl"
+          ><div><h2>Yield</h2></div>
+            <Line options={options} data={data} height="250" />
+            <div className="card-body">
+              <h2 className="card-title">
+                {devices[user].user_name} @ {devices[user].location}
+              </h2>
+              <div className="card-actions justify-end">
+                <button
+                  onClick={(e) => {
+                    this.requestConfig(user);
+                  }}
+                  className="btn btn-primary"
+                >
+                  Request Config
+                </button>
+              </div>
             </div>
-          )
-        })
+          </div>
+          
+        );
       }
-    </div>
-  );
+      this.setState({
+        device_elements: device_elements,
+      });
+    });
+  }
+  render() {
+    return (
+      <div className="h-full bg-gradient-to-r from-green-400 to-yellow-400">
+        
+        <div className="flex flex-row flex-wrap justify-center  ">
+          {" "}
+          {this.state.device_elements}
+        </div>
+      </div>
+    );
+  }
 }
