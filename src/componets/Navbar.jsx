@@ -43,7 +43,7 @@ export default class Navbar extends Component {
                 <a>Homepage</a>
               </li>
               <li>
-                <a>Portfolio</a>
+                <a href="/ufarmsio-dashboard/dashboard">DashBoard</a>
               </li>
               <li>
                 <span

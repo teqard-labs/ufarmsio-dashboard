@@ -99,7 +99,8 @@ export default class DashBoard extends Component {
           <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh] "><p className="text-black text-center text-xs">120 Kg/Month</p></span>
           <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh]  "><p className="text-white text-center text-xs">0.2Kg CO2</p></span>
           <button>
-            <img className="w-[13vh] h-[13vh] justify-center ml-3" src={Barn} alt="barn" />
+          <a href="/ufarmsio-dashboard/data">
+            <img className="w-[13vh] h-[13vh] justify-center ml-3" src={Barn} alt="barn" /></a>
             <div className="justify-center mb-4">
             <p className="text-xs">Farm 1</p>
             <p className="text-xs">Farm ID: UUID12345</p>
@@ -113,7 +114,8 @@ export default class DashBoard extends Component {
           <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh]  "><p className="text-black text-center text-xs">300 Kg/Month</p></span>
           <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh]  "><p className="text-white text-center text-xs">1.2Kg CO2</p></span>
           <button>
-            <img className="w-[13vh] h-[13vh] justify-center ml-3" src={Barn} alt="barn" />
+          <a href="/ufarmsio-dashboard/data">
+            <img className="w-[13vh] h-[13vh] justify-center ml-3" src={Barn} alt="barn" /></a>
             <div className="justify-center mb-4">
             <p className="text-xs">Farm 2</p>
             <p className="text-xs">Farm ID: UUID14286</p>

@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import Logo from "./media/logo.png";
+import Logo from "./media/logo1.jpg";
 import {
   getAuth,
   onAuthStateChanged,
@@ -36,8 +36,9 @@ class Login extends React.Component {
   };
   render() {
     return (
-      <div className="flex justify-center h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-        <div id="loginform" className="w-[60vw]">
+      <div className="flex justify-center h-screen bg-gradient-to-r from-red-500 via-orange-400  to-yellow-400 ">
+        <div id="loginform" className="w-[20vw] mt-10 ">
+          <img src={Logo} alt="logo" className="w-[22vh] h-[12vh] justify-center ml-20 mt-5" />
           <FormHeader title="Login" />
           <Form login={this.login} />
           <OtherMethods />
@@ -86,8 +87,8 @@ const Form = (props) => (
 
 const OtherMethods = (props) => (
   <div id="alternativeLogin" className="flex flex-wrap px-3">
-    <p>
-      Cannot log in? <a href="#">Click Here</a> to contact our customer support
+    <p className="flex flex-wrap justify-center">
+      Cannot log in?<a href="#" className="text-violet-600">Click Here</a> to contact our customer support
       to help you!
     </p>
   </div>
