@@ -167,13 +167,12 @@ export default class Data extends Component {
           <div
             key={user}
             className="card m-5 p-5  bg-base-100 lg:w-[40vw] max-w-[450px] shadow-xl"
-          >
+          ><div><h2>Yield</h2></div>
             <Line options={options} data={data} height="250" />
             <div className="card-body">
               <h2 className="card-title">
                 {devices[user].user_name} @ {devices[user].location}
               </h2>
-              <p>{devices[user].sensor_data.ph}</p>
               <div className="card-actions justify-end">
                 <button
                   onClick={(e) => {
