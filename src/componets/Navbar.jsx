@@ -1,6 +1,19 @@
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import React, { Component } from "react";
 
 export default class Navbar extends Component {
+  constructor(props) {
+    super(props);
+    this.auth = getAuth();
+  }
+  componentDidMount() {
+    onAuthStateChanged(this.auth, (user) => {
+      if (user) {
+      } else {
+        window.location.pathname = process.env.PUBLIC_URL + "/login";
+      }
+    });
+  }
   render() {
     return (
       <div className="navbar bg-base-100">
@@ -33,19 +46,26 @@ export default class Navbar extends Component {
                 <a>Portfolio</a>
               </li>
               <li>
-                <a>About</a>
+                <span
+                  onClick={() => {
+                    signOut(this.auth);
+                  }}
+                >
+                  Logout
+                </span>
               </li>
             </ul>
           </div>
         </div>
         <div className="navbar-center">
-          <a className="btn btn-ghost normal-case text-xl">UfarmIO</a>
+          <a className="btn btn-ghost normal-case text-xl">uframs.io</a>
         </div>
         <div className="navbar-end">
-          <button className="btn btn-ghost btn-circle"
-          onClick={()=>{
-            window.location.pathname = process.env.PUBLIC_URL +"/requests"
-          }}
+          <button
+            className="btn btn-ghost btn-circle"
+            onClick={() => {
+              window.location.pathname = process.env.PUBLIC_URL + "/requests";
+            }}
           >
             <div className="indicator">
               <svg

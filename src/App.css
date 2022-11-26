@@ -105,6 +105,15 @@
   margin-left: 6rem;
 }
 
+.circle{
+  display: flex;
+  height: 25vh;
+  width: 25vh;
+  background-color: white;
+  border-color: chartreuse;
+  border-radius: 50%;
+}
+
 
 .tfcolor{
   color:#4f4d4d;

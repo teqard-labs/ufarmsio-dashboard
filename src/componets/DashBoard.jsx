@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import { db } from "../firebase";
 import { doc, onSnapshot, updateDoc } from "firebase/firestore";
+import Barn from './media/barn.png'
 
 import {
   Chart as ChartJS,
@@ -15,6 +16,7 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import Navbar from "./Navbar";
+import { getAuth } from "firebase/auth";
 
 ChartJS.register(
   CategoryScale,
@@ -73,62 +75,122 @@ export default class DashBoard extends Component {
     alert("Requested Config");
   };
   componentDidMount() {
+
     this.unsub = onSnapshot(doc(db, "devices", "iot"), async (doc) => {
       const source = doc.metadata.hasPendingWrites ? "Local" : "Server";
       const devices = await doc.data();
       this.devices = devices;
-      let device_elements = [];
-      for (let user in devices) {
-        const data = {
-          labels,
-          datasets: [
-            {
-              label: "Yield",
-              data: devices[user].sensor_data.yield,
-              borderColor: "rgb(255, 99, 132)",
-              backgroundColor: "rgba(255, 99, 132, 0.5)",
-            },
-          ],
-        };
-        device_elements.push(
-          <div
-            key={user}
-            className="card m-5 p-5  bg-base-100 lg:w-[40vw] max-w-[450px] shadow-xl"
-          >
-            <Line options={options} data={data} height="250" />
-            <div className="card-body">
-              <h2 className="card-title">
-                {devices[user].user_name} @ {devices[user].location}
-              </h2>
-              <p>{devices[user].sensor_data.ph}</p>
-              <div className="card-actions justify-end">
-                <button
-                  onClick={(e) => {
-                    this.requestConfig(user);
-                  }}
-                  className="btn btn-primary"
-                >
-                  Request Config
-                </button>
-              </div>
-            </div>
-          </div>
-        );
-      }
-      this.setState({
-        device_elements: device_elements,
-      });
+      
     });
   }
+
   render() {
     return (
-      <div>
+      <div className="bg-slate-200 h-screen">
         <Navbar />
-        <div className="flex flex-row flex-wrap justify-center">
+        <div className=" flex flex-shrink justify-center">
           {" "}
           {this.state.device_elements}
+     
+    <div className="flex gap-x-24 gap-y-8 grid sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 grid-row-none justify-center">
+
+    <div className="circle justify-center border-lime-500 border-4 border-solid mt-10">
+        <div className="indicator">
+          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh] "><p className="text-black text-center text-xs">120 Kg/Month</p></span>
+          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh]  "><p className="text-white text-center text-xs">0.2Kg CO2</p></span>
+          <button>
+            <img className="w-[13vh] h-[13vh] justify-center ml-3" src={Barn} alt="barn" />
+            <div className="justify-center mb-4">
+            <p className="text-xs">Farm 1</p>
+            <p className="text-xs">Farm ID: UUID12345</p>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div className="circle justify-center flex flex-wrap border-lime-500 border-4 border-solid mt-10">
+        <div className="indicator">
+          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh]  "><p className="text-black text-center text-xs">300 Kg/Month</p></span>
+          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh]  "><p className="text-white text-center text-xs">1.2Kg CO2</p></span>
+          <button>
+            <img className="w-[13vh] h-[13vh] justify-center ml-3" src={Barn} alt="barn" />
+            <div className="justify-center mb-4">
+            <p className="text-xs">Farm 2</p>
+            <p className="text-xs">Farm ID: UUID14286</p>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div className="circle justify-center flex flex-wrap border-lime-500 border-4 border-solid mt-10">
+        <div className="indicator">
+          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh]  "><p className="text-black text-center text-xs">700 Kg/Month</p></span>
+          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh]  "><p className="text-white text-center text-xs">0.2Kg CO2</p></span>
+          <button>
+            <img className="w-[13vh] h-[13vh] justify-center ml-3" src={Barn} alt="barn" />
+            <div className="justify-center mb-4">
+            <p className="text-xs">Farm 3</p>
+            <p className="text-xs">Farm ID: UUID18445</p>
+            </div>
+          </button>
+        </div>
+      </div>
+      
+      <div className="circle justify-center flex flex-wrap border-lime-500 border-4 border-solid mt-10">
+        <div className="indicator">
+          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh]  "><p className="text-black text-center text-xs">240 Kg/Month</p></span>
+          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh]  "><p className="text-white text-center text-xs">0.6Kg CO2</p></span>
+          <button>
+            <img className="w-[13vh] h-[13vh] justify-center ml-3" src={Barn} alt="barn" />
+            <div className="justify-center mb-4">
+            <p className="text-xs">Farm 4</p>
+            <p className="text-xs">Farm ID: UUID12455</p>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div className="circle justify-center flex flex-wrap border-lime-500 border-4 border-solid mt-10">
+        <div className="indicator">
+          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh]  "><p className="text-black text-center text-xs">400 Kg/Month</p></span>
+          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh]  "><p className="text-white text-center text-xs">1Kg CO2</p></span>
+          <button>
+            <img className="w-[13vh] h-[13vh] justify-center ml-3" src={Barn} alt="barn" />
+            <div className="justify-center mb-4">
+            <p className="text-xs">Farm 5</p>
+            <p className="text-xs">Farm ID: UUID12867</p>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div className="circle justify-center flex flex-wrap border-lime-500 border-4 border-solid mt-10">
+        <div className="indicator">
+          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh]  "><p className="text-black text-center text-xs">250 Kg/Month</p></span>
+          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh]  "><p className="text-white text-center text-xs">0.5Kg CO2</p></span>
+          <button>
+            <img className="w-[13vh] h-[13vh] justify-center ml-3" src={Barn} alt="barn" />
+            <div className="justify-center mb-4">
+            <p className="text-xs">Farm 6</p>
+            <p className="text-xs">Farm ID: UUID12874</p>
+            </div>
+          </button>
+        </div>
+      </div>
+      
+
+     
+    </div>
+    
+    {/* <div className="flex flex-wrap columns-3">
+        <img src={Air} alt="air"><p className="text-xs">Produced 7 tons of Oxygen</p></img>
+        <img src={Community} alt="air"><p className="text-xs">Allows 6200 people to breath for an entire day</p></img>
+        <img src={Carbon} alt="air"><p className="text-xs">Stores 2.5 tons of carbon</p></img>
+      </div> */}
+
         </div>
       </div>
     );
   }
 }
+
