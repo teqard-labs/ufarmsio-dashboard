@@ -93,12 +93,12 @@ export default class Data extends Component {
         device_elements.push(
           <div
             key={user}
-            className="card m-5 p-5  bg-base-100 lg:w-[40vw] max-w-[450px] shadow-xl"
-          ><div><h2>Yield</h2></div>
+            className="card m-5 p-5  w-80%   mr-6 lg:w-[81vw]   shadow-xl bg-white"
+          ><div><h2 className="text-gray-600">Yield</h2></div>
             <Line options={options} data={data} height="250" />
             <div className="card-body">
-              <h2 className="card-title">
-                {devices[user].user_name} @ {devices[user].location}
+              <h2 className="card-title text-gray-600">
+                User 1 @ {devices[user].location}
               </h2>
               <div className="card-actions justify-end">
                 <button
@@ -122,13 +122,13 @@ export default class Data extends Component {
   }
   render() {
     return (
-      <div className="h-full bg-gradient-to-r from-green-400 to-yellow-400">
+      
         
         <div className="flex flex-row flex-wrap justify-center  ">
           {" "}
           {this.state.device_elements}
         </div>
-      </div>
+      
     );
   }
 }
