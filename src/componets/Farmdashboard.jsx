@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from "./Navbar";
 import Bgraph from "./graphdata"
-class Fdashboard extends Component {
+export default class Fdashboard extends Component {
     constructor(props) {
         super(props);
     }
@@ -336,4 +336,3 @@ class Fdashboard extends Component {
     }
 }
  
-export default Fdashboard;

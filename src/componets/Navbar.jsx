@@ -40,13 +40,13 @@ export default class Navbar extends Component {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>Homepage</a>
+                <a href="/ufarmsio-dashboard/home">Homepage</a>
               </li>
               <li>
-                <a href="/ufarmsio-dashboard/dashboard">My Farms</a>
+                <a href="/ufarmsio-dashboard/myfarms">My Farms</a>
               </li>
               <li>
-                <a href="/ufarmsio-dashboard/data">DashBoard</a>
+                <a href="/ufarmsio-dashboard/dashboard">DashBoard</a>
               </li>
               <li>
                 <span
