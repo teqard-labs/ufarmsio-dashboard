@@ -37,8 +37,8 @@ class Login extends React.Component {
   render() {
     return (
       <div className="flex justify-center h-screen bg-gradient-to-r from-red-500 via-orange-400  to-yellow-400 ">
-        <div id="loginform" className="w-[20vw] mt-10 ">
-          <img src={Logo} alt="logo" className="w-[22vh] h-[12vh] justify-center ml-20 mt-5" />
+        <div id="loginform" className="w-[24vw] mt-10">
+          <img src={Logo} alt="logo" className="w-[22vh] h-[12vh] flex justify-center ml-24 p mt-5" />
           <FormHeader title="Login" />
           <Form login={this.login} />
           <OtherMethods />
