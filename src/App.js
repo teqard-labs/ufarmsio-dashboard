@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DashBoard from "./componets/DashBoard";
 import Requests from "./componets/Requests";
 import PlantData from "./componets/Plant_data";
+import FarmData from "./componets/Farmdata"
 import React from "react";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/requests" element={<Requests/>}/>
         <Route path="/data" element={<PlantData/>}/>
+        <Route path="/farmdata" element={<FarmData/>}/>
       </Routes>
     </BrowserRouter>
   );
