@@ -15,7 +15,7 @@ class Login extends React.Component {
     onAuthStateChanged(this.auth, (user) => {
       if (user) {
         const uid = user.uid;
-        window.location.pathname = process.env.PUBLIC_URL + "/dashboard";
+        window.location.pathname = process.env.PUBLIC_URL + "/myfarms";
       } else {
       }
     });
