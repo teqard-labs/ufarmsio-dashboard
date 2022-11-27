@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ufarmsio-dashboard/static/css/main.95fa43f5.css",
-    "main.js": "/ufarmsio-dashboard/static/js/main.a2da9f63.js",
+    "main.css": "/ufarmsio-dashboard/static/css/main.aef78d3c.css",
+    "main.js": "/ufarmsio-dashboard/static/js/main.7fb93759.js",
     "static/js/787.68c3edc1.chunk.js": "/ufarmsio-dashboard/static/js/787.68c3edc1.chunk.js",
     "static/media/lettuce.jpg": "/ufarmsio-dashboard/static/media/lettuce.6c344e690a244302f757.jpg",
     "static/media/logo.png": "/ufarmsio-dashboard/static/media/logo.73e044d13911e39907cd.png",
@@ -15,12 +15,12 @@
     "static/media/water_level.png": "/ufarmsio-dashboard/static/media/water_level.0ac392f44add26749eae.png",
     "static/media/logo1.jpg": "/ufarmsio-dashboard/static/media/logo1.6514cc6efc941de3b480.jpg",
     "index.html": "/ufarmsio-dashboard/index.html",
-    "main.95fa43f5.css.map": "/ufarmsio-dashboard/static/css/main.95fa43f5.css.map",
-    "main.a2da9f63.js.map": "/ufarmsio-dashboard/static/js/main.a2da9f63.js.map",
+    "main.aef78d3c.css.map": "/ufarmsio-dashboard/static/css/main.aef78d3c.css.map",
+    "main.7fb93759.js.map": "/ufarmsio-dashboard/static/js/main.7fb93759.js.map",
     "787.68c3edc1.chunk.js.map": "/ufarmsio-dashboard/static/js/787.68c3edc1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.95fa43f5.css",
-    "static/js/main.a2da9f63.js"
+    "static/css/main.aef78d3c.css",
+    "static/js/main.7fb93759.js"
   ]
 }
