@@ -5,6 +5,8 @@ import { doc, onSnapshot, updateDoc } from "firebase/firestore";
 import {
   Chart as ChartJS,
   CategoryScale,
+  BarController,
+  BarElement,
   LinearScale,
   PointElement,
   LineElement,
@@ -12,12 +14,14 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import { Line } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 
 
 ChartJS.register(
   CategoryScale,
   LinearScale,
+  BarController,
+  BarElement,
   PointElement,
   LineElement,
   Title,
@@ -95,7 +99,7 @@ export default class Data extends Component {
             key={user}
             className="card m-5 p-5  w-80%   mr-6 lg:w-[81vw]   shadow-xl bg-white"
           ><div><h2 className="text-gray-600">Yield</h2></div>
-            <Line options={options} data={data} height="250" />
+            <Bar options={options} data={data} height="110" />
             <div className="card-body">
               <h2 className="card-title text-gray-600">
                 User 1 @ {devices[user].location}
