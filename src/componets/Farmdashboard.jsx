@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+
 import Navbar from "./Navbar";
 import Bgraph from "./graphdata"
 import User from './media/user.jpg'
@@ -6,7 +8,16 @@ import Detail from './media/detail.png'
 export default class Fdashboard extends Component {
     constructor(props) {
         super(props);
-    }
+        this.auth = getAuth();
+  }
+  componentDidMount() {
+    onAuthStateChanged(this.auth, (user) => {
+      if (user) {
+      } else {
+        window.location.pathname = process.env.PUBLIC_URL + "/login";
+      }
+    });
+  }
     
     render() { 
         return ( 
@@ -25,7 +36,7 @@ export default class Fdashboard extends Component {
 
         <ul class="space-y-2 tracking-wide mt-8">
             <li>
-                <a href="#" aria-label="dashboard" class="relative px-4 py-3 flex items-center space-x-4 rounded-xl text-white bg-gradient-to-r from-green-400 to-yellow-400">
+                <a href="/ufarmsio-dashboard/dashboard" aria-label="dashboard" class="relative px-4 py-3 flex items-center space-x-4 rounded-xl text-white bg-gradient-to-r from-green-400 to-yellow-400">
                     <svg class="-ml-1 h-6 w-6" viewBox="0 0 24 24" fill="none">
                         <path d="M6 8a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V8ZM6 15a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-1Z" class="fill-current text-green-400 dark:fill-slate-600"></path>
                         <path d="M13 8a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2V8Z" class="fill-current text-green-200 group-hover:text-green-300"></path>
@@ -35,7 +46,7 @@ export default class Fdashboard extends Component {
                 </a>
             </li>
             <li>
-                <a href="#" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
+                <a href="/ufarmsio-dashboard/myfarms" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path class="fill-current text-gray-300 group-hover:text-green-300" fill-rule="evenodd" d="M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z" clip-rule="evenodd" />
                         <path class="fill-current text-gray-600 group-hover:text-green-600" d="M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z" />
@@ -61,16 +72,30 @@ export default class Fdashboard extends Component {
                     <span class="group-hover:text-gray-700">Requests</span>
                 </a>
             </li>
+            <li>
+                <a href="https://josephgeorgepadayatty.github.io/ufarms-static/view.html" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path class="fill-current text-gray-600 group-hover:text-green-600" d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" />
+                        <path class="fill-current text-gray-300 group-hover:text-green-300" d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
+                    </svg>
+                    <span class="group-hover:text-gray-700">All farms</span>
+                </a>
+            </li>
             
         </ul>
     </div>
 
-    <div class="px-6 -mx-6 pt-4 flex justify-between items-center border-t">
+    <div class="px-6 -mx-6 pt-4 flex justify-between items-center border-t ">
         <button class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
+        <a href="/ufarmsio-dashboard/login" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group  hover:bg-red-500">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
             </svg>
-            <span class="group-hover:text-green-700">Logout</span>
+            <span onClick={() => {
+                    signOut(this.auth);
+                  }}>
+                Logout</span>
+            </a>
         </button>
     </div>
 </aside>
