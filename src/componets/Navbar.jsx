@@ -1,5 +1,6 @@
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import React, { Component } from "react";
+import Logo from './media/logo.png';
 
 export default class Navbar extends Component {
   constructor(props) {
@@ -61,7 +62,7 @@ export default class Navbar extends Component {
           </div>
         </div>
         <div className="navbar-center">
-          <a className="btn btn-ghost normal-case text-xl">uframs.io</a>
+          <a className="btn btn-ghost normal-case text-xl"><img src={Logo} alt="Logo" height="40" width="100"/></a>
         </div>
         <div className="navbar-end">
           <button

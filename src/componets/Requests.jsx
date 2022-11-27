@@ -132,7 +132,7 @@ export default class Requests extends Component {
   }
   render() {
     return (
-      <div data-theme="emerald" className="min-h-screen">
+      <div data-theme="emerald" className="min-h-screen bg-slate-600">
         <Navbar />
         <div className=" flex justify-center mt-10">
           <div className="stack">{this.state.request_elements}</div>

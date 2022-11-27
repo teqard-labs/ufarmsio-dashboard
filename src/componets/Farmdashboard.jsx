@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Navbar from "./Navbar";
 import Bgraph from "./graphdata"
+import User from './media/user.jpg'
+import Detail from './media/detail.png'
 export default class Fdashboard extends Component {
     constructor(props) {
         super(props);
@@ -10,13 +12,13 @@ export default class Fdashboard extends Component {
         return ( 
             
            <div>
-            <Navbar></Navbar>
+            <Navbar/>
             <aside class="ml-[-100%] fixed z-10 top-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-green transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
     <div>
         
 
         <div class="mt-8 text-center">
-            <img src="https://tailus.io/sources/blocks/stats-cards/preview/images/second_user.webp" alt="" class="w-10 h-10 m-auto rounded-full object-cover lg:w-28 lg:h-28"></img>
+            <img src={User} alt="" class="w-10 h-10 m-auto rounded-full object-cover lg:w-28 lg:h-28"></img>
             <h5 class="hidden mt-4 text-xl font-semibold text-gray-600 lg:block">Cynthia J. Watts</h5>
             <span class="hidden text-gray-400 lg:block">Admin</span>
         </div>
@@ -38,7 +40,7 @@ export default class Fdashboard extends Component {
                         <path class="fill-current text-gray-300 group-hover:text-green-300" fill-rule="evenodd" d="M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z" clip-rule="evenodd" />
                         <path class="fill-current text-gray-600 group-hover:text-green-600" d="M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z" />
                     </svg>
-                    <span class="group-hover:text-gray-700">Categories</span>
+                    <span class="group-hover:text-gray-700">My Farms</span>
                 </a>
             </li>
             <li>
@@ -56,18 +58,10 @@ export default class Fdashboard extends Component {
                         <path class="fill-current text-gray-600 group-hover:text-green-600" d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" />
                         <path class="fill-current text-gray-300 group-hover:text-green-300" d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
                     </svg>
-                    <span class="group-hover:text-gray-700">Other data</span>
+                    <span class="group-hover:text-gray-700">Requests</span>
                 </a>
             </li>
-            <li>
-                <a href="#" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path class="fill-current text-gray-300 group-hover:text-green-300" d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
-                        <path class="fill-current text-gray-600 group-hover:text-green-600" fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd" />
-                    </svg>
-                    <span class="group-hover:text-gray-700">Finance</span>
-                </a>
-            </li>
+            
         </ul>
     </div>
 
@@ -228,10 +222,19 @@ export default class Fdashboard extends Component {
             </div>
             <div>
                 <div class="h-full py-6 px-6 rounded-xl border border-gray-200 bg-white">
-                    <h5 class="text-xl text-gray-700">Details</h5>
+                
+                    <div class="flex justify-center ">
+                        <div className="rounded-gradient-borders justify-center ">
+                            <div className="justify-center mb-6 mt-12">
+                                <h1 className='text-center text-black text-4xl font-bold'>8.5</h1 >
+                                <h1 className='text-center text-grey-800 text-xl font-bold'>CO2-e</h1 >
+                            </div>
+                         </div>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-700 ml-10 mt-6">Carbon Credits </h3>
                     
         
-                    <table class="mt-6 -mb-2 w-full text-gray-600">
+                    <table class="mt-14 -mb-2 w-full text-gray-600">
                         <tbody>
                             <tr>
                                 <td class="py-2">Crop Name</td>

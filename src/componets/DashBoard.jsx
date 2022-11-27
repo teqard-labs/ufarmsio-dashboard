@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import { db } from "../firebase";
 import { doc, onSnapshot, updateDoc } from "firebase/firestore";
-import Barn from './media/barn.png'
+import Leaf from './media/leaf.png';
 
 import {
   Chart as ChartJS,
@@ -96,16 +96,15 @@ export default class DashBoard extends Component {
 
     
 
-      <div class="flex justify-center ">
-  <div class="block p-6 rounded-lg shadow-lg bg-gradient-to-r from-green-500 to-yellow-400">
-    <div className="circle justify-center border-lime-500 border-4 border-solid mt-5 mb-5 ">
-        <div className="indicator ">
-          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh] "><p className="text-black text-center text-xs">120 Kg/Month</p></span>
-          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh]  "><p className="text-white text-center text-xs">0.2Kg CO2</p></span>
+  <div class="flex justify-center ">
+    <div className="rounded-gradient-borders justify-center ">
+        <div className="indicator ml-7 mt-4">
+          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh]"><p className="text-black text-center text-xs">120 Kg/Month</p></span>
+          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh] "><p className="text-white text-center text-xs">0.2Kg CO2</p></span>
           <button>
-          <a href="/ufarmsio-dashboard/dashboard">
-            <img className="w-[13vh] h-[13vh] justify-center mt-2 ml-1.5" src={Barn} alt="barn" /></a>
-            <div className="justify-center mb-4">
+          <a href="/ufarmsio-dashboard/plants">
+            <img className="w-[12vh] h-[9vh] justify-center mt-2 ml-3" src={Leaf}  alt="barn" /></a>
+            <div className="justify-center mb-6 mr-1">
             <p className="text-xs text-black">Farm 1</p>
             <p className="text-xs text-black">Farm ID: UUID12345</p>
             </div>
@@ -113,21 +112,19 @@ export default class DashBoard extends Component {
         </div>
       </div>
   </div>
-</div>
 
 
 
 
-<div class="flex justify-center">
-  <div class="block p-6 rounded-lg shadow-lg bg-gradient-to-r from-green-500 to-yellow-400">
-    <div className="circle justify-center border-lime-500 border-4 border-solid mt-5 mb-5">
-        <div className="indicator">
-          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh] "><p className="text-black text-center text-xs">120 Kg/Month</p></span>
-          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh]  "><p className="text-white text-center text-xs">0.2Kg CO2</p></span>
+  <div class="flex justify-center ">
+    <div className="rounded-gradient-borders justify-center ">
+        <div className="indicator ml-7 mt-4">
+          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh]"><p className="text-black text-center text-xs">120 Kg/Month</p></span>
+          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh] "><p className="text-white text-center text-xs">0.2Kg CO2</p></span>
           <button>
-          <a href="/ufarmsio-dashboard/dashboard">
-            <img className="w-[13vh] h-[13vh] justify-center mt-2 ml-1.5" src={Barn} alt="barn" /></a>
-            <div className="justify-center mb-4">
+          <a href="/ufarmsio-dashboard/plants">
+            <img className="w-[12vh] h-[9vh] justify-center mt-2 ml-3" src={Leaf}  alt="barn" /></a>
+            <div className="justify-center mb-6 mr-1">
             <p className="text-xs text-black">Farm 1</p>
             <p className="text-xs text-black">Farm ID: UUID12345</p>
             </div>
@@ -135,18 +132,16 @@ export default class DashBoard extends Component {
         </div>
       </div>
   </div>
-</div>
 
-<div class="flex justify-center">
-  <div class="block p-6 rounded-lg shadow-lg bg-gradient-to-r from-green-500 to-yellow-400">
-    <div className="circle justify-center border-lime-500 border-4 border-solid mt-5 mb-5">
-        <div className="indicator">
-          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh] "><p className="text-black text-center text-xs">120 Kg/Month</p></span>
-          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh]  "><p className="text-white text-center text-xs">0.2Kg CO2</p></span>
+  <div class="flex justify-center ">
+    <div className="rounded-gradient-borders justify-center ">
+        <div className="indicator ml-7 mt-4">
+          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh]"><p className="text-black text-center text-xs">120 Kg/Month</p></span>
+          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh] "><p className="text-white text-center text-xs">0.2Kg CO2</p></span>
           <button>
-          <a href="/ufarmsio-dashboard/dashboard">
-            <img className="w-[13vh] h-[13vh] justify-center mt-2 ml-1.5" src={Barn} alt="barn" /></a>
-            <div className="justify-center mb-4">
+          <a href="/ufarmsio-dashboard/plants">
+            <img className="w-[12vh] h-[9vh] justify-center mt-2 ml-3" src={Leaf}  alt="barn" /></a>
+            <div className="justify-center mb-6 mr-1">
             <p className="text-xs text-black">Farm 1</p>
             <p className="text-xs text-black">Farm ID: UUID12345</p>
             </div>
@@ -154,18 +149,16 @@ export default class DashBoard extends Component {
         </div>
       </div>
   </div>
-</div>
 
-<div class="flex justify-center">
-  <div class="block p-6 rounded-lg shadow-lg bg-gradient-to-r from-green-500 to-yellow-400">
-    <div className="circle justify-center border-lime-500 border-4 border-solid mt-5 mb-5">
-        <div className="indicator">
-          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh] "><p className="text-black text-center text-xs">120 Kg/Month</p></span>
-          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh]  "><p className="text-white text-center text-xs">0.2Kg CO2</p></span>
+  <div class="flex justify-center ">
+    <div className="rounded-gradient-borders justify-center ">
+        <div className="indicator ml-7 mt-4">
+          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh]"><p className="text-black text-center text-xs">120 Kg/Month</p></span>
+          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh] "><p className="text-white text-center text-xs">0.2Kg CO2</p></span>
           <button>
-          <a href="/ufarmsio-dashboard/dashboard">
-            <img className="w-[13vh] h-[13vh] justify-center mt-2 ml-1.5" src={Barn} alt="barn" /></a>
-            <div className="justify-center mb-4">
+          <a href="/ufarmsio-dashboard/plants">
+            <img className="w-[12vh] h-[9vh] justify-center mt-2 ml-3" src={Leaf}  alt="barn" /></a>
+            <div className="justify-center mb-6 mr-1">
             <p className="text-xs text-black">Farm 1</p>
             <p className="text-xs text-black">Farm ID: UUID12345</p>
             </div>
@@ -173,18 +166,16 @@ export default class DashBoard extends Component {
         </div>
       </div>
   </div>
-</div>
 
-<div class="flex justify-center">
-  <div class="block p-6 rounded-lg shadow-lg bg-gradient-to-r from-green-500 to-yellow-400">
-    <div className="circle justify-center border-lime-500 border-4 border-solid mt-5 mb-5">
-        <div className="indicator">
-          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh] "><p className="text-black text-center text-xs">120 Kg/Month</p></span>
-          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh]  "><p className="text-white text-center text-xs">0.2Kg CO2</p></span>
+  <div class="flex justify-center ">
+    <div className="rounded-gradient-borders justify-center ">
+        <div className="indicator ml-7 mt-4">
+          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh]"><p className="text-black text-center text-xs">120 Kg/Month</p></span>
+          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh] "><p className="text-white text-center text-xs">0.2Kg CO2</p></span>
           <button>
-          <a href="/ufarmsio-dashboard/dashboard">
-            <img className="w-[13vh] h-[13vh] justify-center mt-2 ml-1.5" src={Barn} alt="barn" /></a>
-            <div className="justify-center mb-4">
+          <a href="/ufarmsio-dashboard/plants">
+            <img className="w-[12vh] h-[9vh] justify-center mt-2 ml-3" src={Leaf}  alt="barn" /></a>
+            <div className="justify-center mb-6 mr-1">
             <p className="text-xs text-black">Farm 1</p>
             <p className="text-xs text-black">Farm ID: UUID12345</p>
             </div>
@@ -192,18 +183,16 @@ export default class DashBoard extends Component {
         </div>
       </div>
   </div>
-</div>
 
-<div class="flex justify-center">
-  <div class="block p-6 rounded-lg shadow-lg bg-gradient-to-r from-green-500 to-yellow-400">
-    <div className="circle justify-center border-lime-500 border-4 border-solid mt-5 mb-5">
-        <div className="indicator">
-          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh] "><p className="text-black text-center text-xs">120 Kg/Month</p></span>
-          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh]  "><p className="text-white text-center text-xs">0.2Kg CO2</p></span>
+  <div class="flex justify-center ">
+    <div className="rounded-gradient-borders justify-center ">
+        <div className="indicator ml-7 mt-4">
+          <span className="indicator-item indicator-start badge bg-lime-400 rounded-full flex flex-wrap justify-center w-[9vh] h-[9vh]"><p className="text-black text-center text-xs">120 Kg/Month</p></span>
+          <span className="indicator-item indicator-bottom badge bg-black rounded-full flex flex-wrap justify-center w-[7.5vh] h-[7.5vh] "><p className="text-white text-center text-xs">0.2Kg CO2</p></span>
           <button>
-          <a href="/ufarmsio-dashboard/dashboard">
-            <img className="w-[13vh] h-[13vh] justify-center mt-2 ml-1.5" src={Barn} alt="barn" /></a>
-            <div className="justify-center mb-4">
+          <a href="/ufarmsio-dashboard/plants">
+            <img className="w-[12vh] h-[9vh] justify-center mt-2 ml-3" src={Leaf}  alt="barn" /></a>
+            <div className="justify-center mb-6 mr-1">
             <p className="text-xs text-black">Farm 1</p>
             <p className="text-xs text-black">Farm ID: UUID12345</p>
             </div>
@@ -211,7 +200,6 @@ export default class DashBoard extends Component {
         </div>
       </div>
   </div>
-</div>
       
 
      
